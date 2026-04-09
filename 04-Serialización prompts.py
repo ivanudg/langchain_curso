@@ -13,8 +13,8 @@ chat = get_chat()
 ### Guardar plantilla prompt
 plantilla = "Pregunta: {pregunta_usuario}\n\nRespuesta: Vamos a verlo paso a paso."
 prompt = PromptTemplate(template=plantilla)
-prompt.save("plantllas_prompts/prompt.json") #Guardamos la plantilla en un archivo JSON
+prompt.save("planitllas_prompts/prompt.json") #Guardamos la plantilla en un archivo JSON
 
-prompt_cargado = load_prompt("plantllas_prompts/prompt.json") #Cargamos la plantilla desde el archivo JSON
+prompt_cargado = load_prompt("planitllas_prompts/prompt.json") #Cargamos la plantilla desde el archivo JSON
 print(prompt_cargado) #Mostramos la plantilla cargada para verificar que se ha cargado correctamente    
 #print(prompt_cargado.format(pregunta_usuario="¿Cuál es la capital de Francia?")) #Probamos la plantilla cargada con un ejemplo de pregunta
