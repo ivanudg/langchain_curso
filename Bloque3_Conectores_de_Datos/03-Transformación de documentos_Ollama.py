@@ -1,8 +1,16 @@
+import sys
+from pathlib import Path
+
 ## Transformador "Character Text Splitter"
 from langchain_text_splitters import CharacterTextSplitter
 
 #  Carga del fichero
-with open('Bloque3_Conectores_de_Datos/Fuentes datos/Historia Espania.txt', encoding='utf8') as file:
+rutaBase = Path.cwd()
+insumos = Path(rutaBase / 'Fuentes datos')
+
+#with open('Bloque3_Conectores_de_Datos/Fuentes datos/Historia España.txt', encoding='utf8') as file:
+archivo = Path(insumos / 'Historia Espania.txt')
+with open(archivo, encoding='utf8') as file:
     texto_completo = file.read()
 
 # Números de caracteres
