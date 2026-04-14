@@ -32,4 +32,4 @@ chain_2 = LLMChain(llm=llm, prompt=prompt2)
 full_chain = SimpleSequentialChain(chains=[chain_1, chain_2], verbose=True) #verbose=True nos irá dando paso a paso lo que hace, pudiendo ver los resultados intermedios
 
 result = full_chain.invoke(input="Inteligencia Artificial")
-print(result)
+print(result['output'])
