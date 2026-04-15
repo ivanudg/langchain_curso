@@ -37,9 +37,8 @@ print(f'Solicitud completa: {solicitud_completa}')
 
 ## Obtener el resultado de la respuesta formateada
 try:
-    chat = ChatOllama(
-        model='gpt-oss:20b'
-    )
+    #chat = ChatOllama(model='gpt-oss:20b')
+    chat = ChatOllama(model='gpt-oss:20b-cloud')
     resultado = chat.invoke(solicitud_completa)
     print(f'Resultado: {resultado}')
     print(f'Resultado content: {resultado.content}')
