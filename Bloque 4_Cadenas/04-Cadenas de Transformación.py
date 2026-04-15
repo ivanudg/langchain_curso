@@ -9,10 +9,10 @@ llm = ChatOllama(model='gpt-oss:20b-cloud')
 ## Importamos documentos
 from langchain_community.document_loaders import WikipediaLoader
 
-consulta_wikipedia = input()
-print(f'CONSULTA WIKIPEDIA \n {consulta_wikipedia}'+'*'*250)
+consulta_wikipedia = input("Escribe tu consulta para Wikipedia: ")
+print(f'CONSULTA WIKIPEDIA \n {consulta_wikipedia} \n'+'*'*250)
 
-idioma_final = input()
+idioma_final = input("Escribe el idioma al que quieres traducir el texto: ")
 print(f'IDIOMA FINAL \n {idioma_final}'+'*'*250)
 
 loader = WikipediaLoader(
